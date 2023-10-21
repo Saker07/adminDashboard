@@ -1,3 +1,100 @@
 * {
     box-sizing: content-box;
+    margin: 0;
+    list-style-type: none;
+}
+
+:root {
+    --sidebarColor: #6f6fe3;
+}
+
+ul {
+    padding: 0;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    background-color: var(--sidebarColor);
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    padding: 2rem 6rem 2rem 1rem;
+    color: white;
+    overflow: auto;
+    flex-basis: 13rem;
+    flex-shrink: 1;
+}
+
+li {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-start;
+    align-items:  center;
+}
+
+h1 {
+    font-size: 3rem;
+}
+.sidebar > section > ul{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-size: 2rem;
+}
+
+a.navLink {
+    text-decoration: none;
+}
+a.navLink:visited {
+    color: white;
+}
+
+.mainPageContainer {
+    display: flex;
+    flex-direction: column;
+    max-height: 100vh;
+    flex-grow: 1;
+    flex-shrink: 0.5;
+    flex-basis: 50%;
+}
+
+.mainPageContainer > header {
+    min-height: 5rem;
+    max-height: 10rem;
+    flex: 1 1 auto;
+    display: grid;
+    grid-template:  1fr 2fr / 1fr 10em 30em;
+
+
+    border: 3px solid red;
+}
+
+.searchBarContainer {
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.searchBarContainer > input {
+    border-radius: 20px;
+    flex: 1;
+    padding: 5px;
+    border-color: rgb(228, 228, 228);
+    border-style: solid;
+    background-color: rgb(228, 228, 228);
+}
+
+
+
+
+.mainPageContainer > main {
+    flex: 1 1 auto;
+    border: 3px solid green;
+    overflow: auto;
+    min-height: 700px;
 }
