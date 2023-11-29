@@ -37,13 +37,13 @@ li {
 }
 
 h1 {
-    font-size: 3rem;
+    font-size: clamp(1rem, 0.5rem + 3vh, 3rem);
 }
 .sidebar > section > ul{
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    font-size: 2rem;
+    font-size: clamp(1rem, 1rem + 0.5vh, 2rem);
 }
 
 a.navLink {
