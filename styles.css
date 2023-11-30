@@ -165,6 +165,10 @@ article>h4 {
 }
 article>p {
     grid-area: text;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
 }
 
 .listContainer {
@@ -181,4 +185,11 @@ article>p {
 
 .listContainer h5 {
     font-size: clamp(0.8rem, 0.3rem + 1vw, 1.1rem);
+}
+
+.listContainer p {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
 }
