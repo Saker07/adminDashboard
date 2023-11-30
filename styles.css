@@ -107,7 +107,7 @@ main {
     grid-template: repeat(2, 1fr) / 3fr 1fr;
     padding: 1rem;
     gap: 2rem;
-    background-color: gray;
+    background-color: #e2e8f0;
 }
 
 .cardTitleContainer {
@@ -134,19 +134,23 @@ main {
     border-radius: 0.7rem 1rem 1rem 0.7rem;
     display: grid;
     column-gap: 1rem;
-    grid-template: 2rem 1fr 1rem / 10px 1fr repeat(3, 1rem);
+    grid-template: 2rem 1fr 1rem / 1fr repeat(3, 1rem);
     grid-template-areas:
-        'colorBar  title  title  title  title'
-        'colorBar  text  text  text  text'
-        'colorBar  .  button  button  button';
+        'title  title  title  title'
+        'text  text  text  text'
+        '.  button  button  button';
+    position: relative;
+    align-items:center;
+    padding:2rem;
 }
 article::before {
     content: "";
     background-color: orange;
     height: 100%;
     max-width: 10px;
-    grid-area: colorBar;
     border-radius: 1rem 0 0 1rem;
+    position:absolute;
+    width: min(1vw, 10px);
 }
 
 article>h4 {
