@@ -25,7 +25,7 @@ body {
     padding: 2rem 6rem 2rem 1rem;
     color: white;
     overflow: auto;
-    flex-basis: 13rem;
+    flex-basis: 10rem;
     flex-shrink: 1;
 }
 
@@ -43,7 +43,7 @@ h1 {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    font-size: clamp(1rem, 1rem + 0.5vh, 2rem);
+    font-size: clamp(1rem, 0.1rem + 2.7vh, 2rem);
 }
 
 a.navLink {
@@ -114,7 +114,6 @@ main {
     display: grid;
     grid-template-rows: min-content 1fr;
     gap: 1rem;
-    background-color: white;
     padding: 1rem;
     border-radius: 1rem;
 }
@@ -131,6 +130,8 @@ main {
 }
 
 .projectsContainer>article {
+    background-color: white;
+    border-radius: 0.7rem 1rem 1rem 0.7rem;
     display: grid;
     column-gap: 1rem;
     grid-template: 2rem 1fr 1rem / 10px 1fr repeat(3, 1rem);
@@ -139,17 +140,24 @@ main {
         'colorBar  text  text  text  text'
         'colorBar  .  button  button  button';
 }
-
-.colorBar {
+article::before {
+    content: "";
     background-color: orange;
     height: 100%;
     max-width: 10px;
     grid-area: colorBar;
     border-radius: 1rem 0 0 1rem;
 }
+
 article>h4 {
     grid-area: title;
 }
 article>p {
     grid-area: text;
+}
+
+.listContainer {
+    background-color: white;
+    border-radius: 1rem;
+    padding: 2rem;
 }
