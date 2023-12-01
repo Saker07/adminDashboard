@@ -220,3 +220,19 @@ article>p {
     -webkit-line-clamp: 3;
     overflow: hidden;
 }
+
+.sidebar img {
+    filter: invert(100%);
+}
+
+.userIcon {
+    border-radius: 50%;
+    height: 2rem;
+    width: 2rem;
+    padding: 0.5rem;
+    background-color: rgb(245, 202, 9); 
+}
+.mainUserIcon {
+    height: 3rem;
+    width: 3rem;
+}
