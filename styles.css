@@ -73,14 +73,18 @@ a.navLink:visited {
 
 .mainPageContainer > header {
     min-height: 5rem;
-    max-height: 10rem;
+    max-height: 50rem;
+    padding: 1rem 2rem;
     flex: 1 1 auto;
     display: grid;
-    grid-template:  1fr 2fr / 1fr 10em 30em;
+    gap: 1rem;
+    align-items: center;
+    grid-template:  1fr 2fr / 1fr 10rem 15rem;
     grid-template-areas:
     'searchBar alertIcon cornerUser'
     'mainUser interactionButtons interactionButtons';
     border: 3px solid red;
+    min-height: 10rem;
 }
 
 .searchBarContainer {
@@ -101,12 +105,27 @@ a.navLink:visited {
 }
 .alertButtonContainer {
     grid-area: alertIcon;
+    justify-self: end;
 }
-.cornerUserContainer {
+.userContainer {
     grid-area: cornerUser;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 .mainUserContainer {
     grid-area: mainUser;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    gap: 1rem;
+    position: relative;
+}
+.mainUserContainer > .username::before {
+    content: 'Hi there,\a';
+    white-space: pre;
+    font-size: 0.7em;
 }
 .postNav {
     grid-area: interactionButtons;
@@ -118,7 +137,7 @@ a.navLink:visited {
 }
 .postNav > button {
     flex-grow: 1;
-    min-height: clamp(1rem, 0.5rem + 1vh, 2rem)
+    min-height: clamp(1rem, 0.5rem + 1vh, 2rem);
 }
 
 
