@@ -73,7 +73,7 @@ a.navLink:visited {
 
 .mainPageContainer > header {
     min-height: 5rem;
-    max-height: 50rem;
+    max-height: 10rem;
     padding: 1rem 2rem;
     flex: 1 1 auto;
     display: grid;
@@ -124,7 +124,8 @@ a.navLink:visited {
 .mainUserContainer > .username::before {
     content: 'Hi there,\a';
     white-space: pre;
-    font-size: 0.7em;
+    font-size: clamp(0.7em, 0.5rem + 1vh, 1.1rem);
+    
 }
 .postNav {
     grid-area: interactionButtons;
@@ -183,7 +184,7 @@ main {
     grid-template: repeat(3, 1fr) / repeat(2, 1fr);
     gap: 1rem;
     overflow: auto;
-    font-size: 0.9rem;
+    font-size: clamp(0.9rem, 0.7rem + 1vh, 1.4rem);
 }
 
 .projectsContainer>article {
@@ -237,7 +238,7 @@ article>p {
     background-color: white;
     border-radius: 1rem;
     padding: 2rem;
-    font-size: clamp(0.5rem, 0.1rem + 1vw, 0.8rem);
+    font-size: clamp(0.5rem, 0.3rem + 1vh, 1.2rem);
     justify-content: center;
     display: flex;
     flex-direction: column;
@@ -256,7 +257,7 @@ article>p {
 }
 
 .listContainer h5 {
-    font-size: clamp(0.8rem, 0.3rem + 1vw, 1.1rem);
+    font-size: clamp(0.8rem, 0.3rem + 1vw, 1.2rem);
 }
 
 .listContainer p {
@@ -290,7 +291,7 @@ article>p {
 .trendingContainer .userContainer {
     gap: 1rem;
     & h6{
-        font-size: 0.8rem;
+        font-size: clamp(0.8rem, 0.6rem + 1vh, 1.1rem);
         font-weight: bold;
     }
     & span{
